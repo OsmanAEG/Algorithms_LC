@@ -1,4 +1,4 @@
-# binary search
+# sequential binary search
 class Solution:
   def search(self, nums: list[int], target: int) -> int:
     min_val = 0
