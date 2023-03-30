@@ -4,7 +4,7 @@ class Solution:
     min_val = 0
     max_val = len(nums) - 1
 
-    while min_val != max_val:
+    while min_val <= max_val:
       mid_val = min_val + (max_val-min_val)//2
       mid_nums = nums[mid_val]
       if(nums[mid_val] == target):
