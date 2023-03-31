@@ -7,14 +7,14 @@ class Solution:
           tmp = unsorted_list[j]
           unsorted_list[j] = unsorted_list[j+1]
           unsorted_list[j+1] = tmp
-          
+
   def sortedSquares(self, nums):
     n = len(nums)
     squared = [int]*n
-    
+
     # squaring listed values
     for i in range(n):
-      squared[i] = nums[i]**2 
+      squared[i] = nums[i]**2
 
     self.bubble_sort(squared)
     # alternatively: squared.sort()

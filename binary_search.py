@@ -13,7 +13,7 @@ class Solution:
         min_val = mid_val + 1
       else:
         max_val = mid_val - 1
-    
+
     return -1
 
 def example_1():
