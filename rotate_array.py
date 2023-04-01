@@ -78,8 +78,8 @@ def example_test():
   result = solution_handler.rotate(solution_handler, nums, k)
   print("The result for example test is: " + str(result))
 
-#example_1()
-#example_2()
+example_1()
+example_2()
 example_test()
 
 
