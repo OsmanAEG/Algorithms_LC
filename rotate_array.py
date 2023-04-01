@@ -22,18 +22,34 @@ class Solution_2:
     shifted_nums = []
     n = len(nums)
 
-    # add the end of the list
-    for i in range(n-k, n):
-      shifted_nums.append(nums[i])
+    if n > 1 and n != k:
+      start = 0
+      end = 0
 
-    # add the begining of the list
-    for i in range(n-k):
-      shifted_nums.append(nums[i])
+      if n > k:
+        start = n-k
+        end = n
+      else:
+        start = n - (k-n)
+        end = n
 
-    return shifted_nums
+      print(start)
+      print(end)
+      # add the end of the list
+      for i in range(start, end):
+        shifted_nums.append(nums[i])
+
+      # add the begining of the list
+      for i in range(start):
+        shifted_nums.append(nums[i])
+
+      for i in range(n):
+        nums[i] = shifted_nums[i]
+
+    return nums
 
 def check_result(result, expected_result):
-  n = len(result) - 1
+  n = len(result)
   for i in range(n):
     assert result[i] == expected_result[i]
 
@@ -55,5 +71,15 @@ def example_2():
   check_result(result, expected_result)
   print("The result for example 2 is: " + str(result))
 
-example_1()
-example_2()
+def example_test():
+  nums = [1, 2, 3]
+  k = 4
+  solution_handler = Solution_2
+  result = solution_handler.rotate(solution_handler, nums, k)
+  print("The result for example test is: " + str(result))
+
+#example_1()
+#example_2()
+example_test()
+
+
