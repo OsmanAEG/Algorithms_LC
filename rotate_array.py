@@ -33,8 +33,6 @@ class Solution_2:
         start = n - (k-n)
         end = n
 
-      print(start)
-      print(end)
       # add the end of the list
       for i in range(start, end):
         shifted_nums.append(nums[i])
