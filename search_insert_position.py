@@ -12,7 +12,7 @@ class Solution(object):
           min_val = mid_val + 1
         else:
           max_val = mid_val - 1
-      
+
       if target < nums[mid_val]:
         return mid_val
       else:
