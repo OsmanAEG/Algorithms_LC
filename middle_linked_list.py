@@ -52,7 +52,7 @@ class Solution_1:
 class Solution_2:
   def middleNode(self, head: ListNode) -> ListNode:
     tmp_skip2 = head
-    while tmp and tmp.next:
+    while tmp_skip2 and tmp_skip2.next:
       head = head.next
       tmp_skip2 = tmp_skip2.next.next
     return head
@@ -71,7 +71,7 @@ def example_1():
     this_linked_list.insert_node(next_node)
 
   expected_result = 3
-  solution_handler = Solution_1
+  solution_handler = Solution_2
   result = solution_handler.middleNode(solution_handler, first_node)
   check_result(result.val, expected_result)
   print("The result for example 1 is: " + str(result.val))
@@ -86,7 +86,7 @@ def example_2():
     this_linked_list.insert_node(next_node)
 
   expected_result = 4
-  solution_handler = Solution_1
+  solution_handler = Solution_2
   result = solution_handler.middleNode(solution_handler, first_node)
   check_result(result.val, expected_result)
   print("The result for example 2 is: " + str(result.val))
