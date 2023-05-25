@@ -45,9 +45,30 @@ def check_result(result, expected_result):
     result = result.next
     i += 1
 
-# alternative solution
+class Solution_1:
+  def removeNthFromEnd(self, head, n):
+    this_linked_list = LinkedList()
+    this_linked_list.insert_node(head)
+    length = this_linked_list.list_length()
+
+    that_linked_list = LinkedList()
+
+    for i in range(length-n):
+      that_linked_list.insert_node(ListNode(head.val))
+      head = head.next
+
+    head = head.next
+
+    for i in range(length-n-1, length-2):
+      that_linked_list.insert_node(ListNode(head.val))
+      head = head.next
+
+    return that_linked_list.head
+
+# efficient solution
 class Solution_2:
-  def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+  def removeNthFromEnd(self, head, n):
+    
     
 
 def example_1():
